@@ -1,3 +1,41 @@
-<div *ngFor="let sub of subscriptionData">
-    <app-sub-tile [subscriptionData]="sub"></app-sub-tile>
+<div class="sub-list">
+  <div class="right-sub-list">
+    <div *ngFor="let sub of subscriptionData; let i = index">
+      <app-sub-tile *ngIf="i % 2 == 0" [subscriptionData]="sub"></app-sub-tile>
+    </div>
+  </div>
+  <div class="right-sub-list">
+    <div *ngFor="let sub of subscriptionData; let i = index">
+      <app-sub-tile *ngIf="i % 2 == 1" [subscriptionData]="sub"></app-sub-tile>
+    </div>
+  </div>
 </div>
+
+<!-- <table>
+  <ng-container *ngFor="let sub of subscriptionData; let i = index">
+      <tr>
+          <td *ngIf="i % 2 == 0">
+            <app-sub-tile [subscriptionData]="sub"/>
+          </td>
+      </tr>
+      <tr>
+        <td *ngIf="i % 2 == 1">
+          <app-sub-tile [subscriptionData]="sub"/>
+        </td>
+      </tr>
+  </ng-container>
+</table> -->
+
+<!-- <table>
+  <ng-container *ngFor="let col of columns; let i = index">
+      <tr *ngIf="i % 2 == 0">
+          <td>{{col.columnName}}</td>
+          <td>{{i < columns.length - 1 ? columns[i + 1].columnName : ""}}</td>
+      </tr>
+  </ng-container>
+</table> -->
+
+
+<!-- <div *ngFor="let sub of subscriptionData">
+  <app-sub-tile [subscriptionData]="sub"></app-sub-tile>
+</div> -->

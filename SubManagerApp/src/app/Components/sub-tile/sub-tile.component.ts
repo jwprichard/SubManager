@@ -9,10 +9,6 @@ import { SubscriptionData } from 'src/types';
 })
 export class SubTileComponent {
 
-  subscriptionData: SubscriptionData;
-
-  constructor(private userDataService: UserDataService) {
-    this.subscriptionData = userDataService.getUserData();
-  }
+  @Input() subscriptionData!: SubscriptionData
 
 }

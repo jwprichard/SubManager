@@ -1,5 +1,5 @@
 export type SubscriptionData = {
-    logoLink: string;
-    price: string;
-    frequency: string;
+    name: string;
+    logoimagelink: string;
+    price: number;
 }

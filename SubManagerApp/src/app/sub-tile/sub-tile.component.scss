@@ -1,0 +1,59 @@
+.sub-tile{
+    border: 1px rgb(214, 214, 214) solid;
+    margin: 10px;
+    border-radius: 10px;
+    width: 25vmax;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 300px;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.sub-tile:hover {
+    transform: scale(1.01);
+}
+
+.sub-tile > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.title {
+    border-bottom: 1px rgb(214, 214, 214) solid;
+    background-color: rgb(247, 246, 246);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.items {
+    padding: 5%;
+}
+
+.price {
+    border-bottom: 1px rgb(214, 214, 214) solid;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5% 0%;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 0%;
+}
+
+.left {
+    width: 50%;
+    text-align: right;
+}
+
+.right {
+    width: 50%;
+    text-align: left;
+}

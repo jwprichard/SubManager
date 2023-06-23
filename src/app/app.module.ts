@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubTileComponent } from './Components/sub-tile/sub-tile.component';
 import { SubTileControllerComponent } from './Components/sub-tile-controller/sub-tile-controller.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 @NgModule({
   declarations: [

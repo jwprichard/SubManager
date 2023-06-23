@@ -1,0 +1,34 @@
+.navbar-container{
+    top: 0;
+    right: 0;
+    width: 100%;
+    // height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: solid;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    padding: 40px;
+}
+
+.app-logo{
+    display: flex;
+    width: 60%;
+}
+
+.navigation{
+    width: 30%;
+}
+
+.login{
+    width: 10%;
+}

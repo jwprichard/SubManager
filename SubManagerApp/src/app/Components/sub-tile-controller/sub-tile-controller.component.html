@@ -1,3 +1,7 @@
-<div *ngFor="let sub of subscriptionData">
-    <app-sub-tile [subscriptionData]="sub"></app-sub-tile>
+<div>
+    <tr *ngFor="let subRow of subscriptionDataTable">
+        <td *ngFor="let sub of subRow">
+            <app-sub-tile [subscriptionData]="sub"></app-sub-tile>
+        </td>
+    </tr>
 </div>

@@ -10,9 +10,29 @@ import { SubscriptionData } from 'src/types';
 export class SubTileControllerComponent {
 
   subscriptionData: SubscriptionData[]
+  subscriptionDataTable: any[][]
+  columnCount: number
+  
 
   constructor(private userDataService: UserDataService) {
     this.subscriptionData = userDataService.getUserData();
-    console.log(this.subscriptionData);
+    this.columnCount = 3
+    this.subscriptionDataTable = new Array()
+    let rowCount = 0
+
+    // Initialise the nested array.
+    this.subscriptionDataTable[0] = new Array();
+
+    for(let i = 0; i < this.subscriptionData.length; i++)
+    {
+      if (i == (rowCount + 1) * this.columnCount)
+      {
+        rowCount++
+        this.subscriptionDataTable[rowCount] = new Array();
+      }
+      console.log(rowCount + "-" + i%this.columnCount)
+      this.subscriptionDataTable[rowCount][i%this.columnCount] = this.subscriptionData[i]
+    }
+    console.log(this.subscriptionDataTable)
   }
 }

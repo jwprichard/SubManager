@@ -1,6 +1,6 @@
 <div class="sub-tile">
     <div class="title">
-        <img src={{subscriptionData.logoimagelink}} alt="Netflix" style="width:100px;height:50px;">
+        <img src={{subscriptionData.logoimagelink}} alt={{subscriptionData.name}} style="width:100px;height:50px;">
     </div>
     <div class="items">
         <div class="price">
@@ -9,7 +9,7 @@
         </div>
         <div class="date">
             <div class="right">Frequency</div>
-            <!-- <div class="left">{{subscriptionData.frequency}}</div> -->
+            <div class="left">{{subscriptionData.paymentFrequency}}</div>
         </div>
     </div>
 </div>

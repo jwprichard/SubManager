@@ -15,14 +15,24 @@ export class SubTileControllerComponent {
   
 
   constructor(private userDataService: UserDataService) {
-    this.subscriptionData = userDataService.getUserData();
-    this.columnCount = 3
+    // Initialise variables
+    this.subscriptionData = userDataService.getUserData()
     this.subscriptionDataTable = new Array()
-    let rowCount = 0
+    this.columnCount = 3
+
+    this.FormatTable()
+  }
+
+  // Takes the subscription data and formats it into a table to be
+  // displayed correctly.
+  private FormatTable(){
 
     // Initialise the nested array.
     this.subscriptionDataTable[0] = new Array();
+    let rowCount = 0
 
+    // Loop through the subscription data and assign it to nested arrays in SubscriptionDataTable
+    // based on the selected columnCount.
     for(let i = 0; i < this.subscriptionData.length; i++)
     {
       if (i == (rowCount + 1) * this.columnCount)
@@ -30,9 +40,7 @@ export class SubTileControllerComponent {
         rowCount++
         this.subscriptionDataTable[rowCount] = new Array();
       }
-      console.log(rowCount + "-" + i%this.columnCount)
       this.subscriptionDataTable[rowCount][i%this.columnCount] = this.subscriptionData[i]
     }
-    console.log(this.subscriptionDataTable)
   }
 }
